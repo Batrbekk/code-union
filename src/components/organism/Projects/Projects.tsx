@@ -71,8 +71,8 @@ export const Projects = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-y-5 px-5 md:gap-y-12 lg:px-[120px]">
-      <p className="font-['Raleway',sans-serif] font-bold text-[28px] leading-[130%] md:text-[54px] md:leading-[120%]">{t('ourProject')}</p>
+    <div className="flex flex-col gap-y-5 px-5 md:gap-y-12 lg:container mx-auto">
+      <p className="text-white font-['Raleway',sans-serif] font-bold text-[28px] leading-[130%] md:text-[54px] md:leading-[120%]">{t('ourProject')}</p>
       <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-y-4 md:gap-4 lg:hidden">
         {cardMobData.map((card) => {
           return (

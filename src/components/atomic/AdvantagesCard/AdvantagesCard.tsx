@@ -18,26 +18,26 @@ export const AdvantagesCard: React.FC<Props> = (props) => {
 
   return (
     <div className={`${props.className} p-5 md:p-8 w-full rounded-[10px] flex flex-col gap-y-4`}>
-      <p className="font-['Raleway',sans-serif] font-bold text-2xl leading-[120%] md:text-4xl">
+      <p className="text-white font-['Raleway',sans-serif] font-bold text-2xl leading-[120%] md:text-4xl">
         {props.title}
       </p>
       {props.withIcons && (
         <div className="flex items-center gap-x-2">
           <div className="px-4 py-2 border  rounded-full flex items-center gap-x-1.5">
             <Image src={TimeIcon} alt="time-icon" />
-            <p className="font-['Questrial',sans-serif] font-medium text-xs leading-[150%] md:text-2xl">
+            <p className="text-white font-['Questrial',sans-serif] font-medium text-xs leading-[150%] md:text-2xl">
               {t('advantagesTime')}
             </p>
           </div>
           <div className="px-4 py-2 border  rounded-full flex items-center gap-x-1.5">
             <Image src={BudgetIcon} alt="time-icon" />
-            <p className="font-['Questrial',sans-serif] font-medium text-xs leading-[150%] md:text-2xl">
+            <p className="text-white font-['Questrial',sans-serif] font-medium text-xs leading-[150%] md:text-2xl">
               {t('advantagesBudget')}
             </p>
           </div>
         </div>
       )}
-      <p className="font-['Questrial',sans-serif] text-sm leading-[150%] w-8/12 lg:w-full md:text-[22px]">
+      <p className="text-white font-['Questrial',sans-serif] text-sm leading-[150%] w-8/12 lg:w-full md:text-[22px]">
         {props.text}
       </p>
     </div>

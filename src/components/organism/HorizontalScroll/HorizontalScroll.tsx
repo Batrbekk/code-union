@@ -38,22 +38,22 @@ export const HorizontalScroll = () => {
           }}
         >
           <SwiperSlide className="w-full max-w-[458px] lg:max-w-full">
-            <button className="px-4 py-2 border rounded-full w-full font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
+            <button className="px-4 py-2 border rounded-full w-full text-white font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
               {t('serviceList.0')}
             </button>
           </SwiperSlide>
           <SwiperSlide className="w-full max-w-[458px] lg:max-w-full">
-            <button className="px-4 py-2 border rounded-full w-full font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
+            <button className="px-4 py-2 border rounded-full w-full text-white font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
               {t('serviceList.1')}
             </button>
           </SwiperSlide>
           <SwiperSlide className="w-full max-w-[458px] lg:max-w-full">
-            <button className="px-4 py-2 border rounded-full w-full font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
+            <button className="px-4 py-2 border rounded-full w-full text-white font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
               {t('serviceList.2')}
             </button>
           </SwiperSlide>
           <SwiperSlide className="w-full max-w-[458px] lg:max-w-full">
-            <button className="px-4 py-2 border rounded-full w-full font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
+            <button className="px-4 py-2 border rounded-full w-full text-white font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
               {t('serviceList.3')}
             </button>
           </SwiperSlide>
@@ -83,22 +83,22 @@ export const HorizontalScroll = () => {
           }}
         >
           <SwiperSlide className="w-full max-w-[458px] lg:max-w-full">
-            <button className="px-4 py-2 border rounded-full w-full font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
+            <button className="px-4 py-2 border rounded-full w-full text-white font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
               {t('serviceList.4')}
             </button>
           </SwiperSlide>
           <SwiperSlide className="w-full max-w-[458px] lg:max-w-full">
-            <button className="px-4 py-2 border rounded-full w-full font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
+            <button className="px-4 py-2 border rounded-full w-full text-white font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
               {t('serviceList.5')}
             </button>
           </SwiperSlide>
           <SwiperSlide className="w-full max-w-[458px] lg:max-w-full">
-            <button className="px-4 py-2 border rounded-full w-full font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
+            <button className="px-4 py-2 border rounded-full w-full text-white font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
               {t('serviceList.6')}
             </button>
           </SwiperSlide>
           <SwiperSlide className="w-full max-w-[458px] lg:max-w-full">
-            <button className="px-4 py-2 border rounded-full w-full font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
+            <button className="px-4 py-2 border rounded-full w-full text-white font-['Questrial',sans-serif] text-sm leading-[150%] md:text-2xl hover:bg-[#0046FA] hover:border-[#0046FA]">
               {t('serviceList.7')}
             </button>
           </SwiperSlide>

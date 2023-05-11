@@ -31,7 +31,7 @@ export const Advantages = () => {
   ]
 
   return (
-    <div className="px-5 flex flex-col items-start gap-y-8 lg:px-[120px]">
+    <div className="px-5 flex lg:container mx-auto flex-col items-start gap-y-8">
       <div className="flex flex-col gap-y-4">
         <p className="text-white font-bold font-['Raleway',sans-serif] text-[28px] leading-[130%] md:text-[54px] md:leading-[120%] w-1/2">
           {t('advantagesTitle')}

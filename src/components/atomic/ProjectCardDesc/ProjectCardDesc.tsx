@@ -24,10 +24,10 @@ export const ProjectCardDesc: React.FC<Props> = (props) => {
           `}
         >
           <div className="flex flex-col gap-y-2.5">
-            <p className="font-['Raleway',sans-serif] font-bold leading-[120%] text-5xl">
+            <p className="font-['Raleway',sans-serif] font-bold leading-[120%] text-5xl text-white">
               {props.title}
             </p>
-            <p className="font-['Questrial',sans-serif] leading-[150%] text-[22px]">
+            <p className="font-['Questrial',sans-serif] leading-[150%] text-[22px] text-white">
               {props.text}
             </p>
           </div>
@@ -49,10 +49,10 @@ export const ProjectCardDesc: React.FC<Props> = (props) => {
         `}>
           <div className={`absolute max-w-[336px] py-10 ${props.textPosition}`}>
             <div className="flex flex-col justify-between h-[270px]">
-              <p className="font-['Raleway',sans-serif] font-bold leading-[120%] text-5xl">
+              <p className="font-['Raleway',sans-serif] font-bold leading-[120%] text-5xl text-white">
                 {props.title}
               </p>
-              <p className="font-['Questrial',sans-serif] leading-[150%] text-[22px]">
+              <p className="font-['Questrial',sans-serif] leading-[150%] text-[22px] text-white">
                 {props.text}
               </p>
             </div>

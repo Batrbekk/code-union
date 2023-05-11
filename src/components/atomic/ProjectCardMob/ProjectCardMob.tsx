@@ -20,10 +20,10 @@ export const ProjectCardMob: React.FC<Props> = (props) => {
       `}
     >
       <div className="flex flex-col gap-y-2.5">
-        <p className="font-['Raleway',sans-serif] font-bold text-2xl leading-[120%] md:text-5xl">
+        <p className="font-['Raleway',sans-serif] font-bold text-2xl leading-[120%] md:text-5xl text-white">
           {props.title}
         </p>
-        <p className="font-['Questrial',sans-serif] text-base leading-[150%] md:text-[22px]">
+        <p className="font-['Questrial',sans-serif] text-base leading-[150%] md:text-[22px] text-white">
           {props.text}
         </p>
       </div>
