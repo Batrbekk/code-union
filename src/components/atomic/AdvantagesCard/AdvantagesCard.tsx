@@ -17,7 +17,7 @@ export const AdvantagesCard: React.FC<Props> = (props) => {
   const { t } = useTranslation([COMMON_TNS]);
 
   return (
-    <div className={`${props.className} p-5 md:p-8 md:w-full rounded-[10px] flex flex-col gap-y-4`}>
+    <div className={`${props.className} p-5 md:p-8 w-full rounded-[10px] flex flex-col gap-y-4`}>
       <p className="font-['Raleway',sans-serif] font-bold text-2xl leading-[120%] md:text-4xl">
         {props.title}
       </p>
