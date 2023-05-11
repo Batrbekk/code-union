@@ -14,6 +14,7 @@ export const ModalButton: React.FC<Props> = (props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [activeChip, setActiveChip] = useState<string>('');
   const [activePlatform, setActivePlatform] = useState<string>('');
+  const [activeAbout, setActiveAbout] = useState<string>('');
 
   const initToHelper = useCallback((index) => {
     setActiveChip(index);
@@ -21,6 +22,10 @@ export const ModalButton: React.FC<Props> = (props) => {
 
   const initToPlatform = useCallback((index) => {
     setActivePlatform(index);
+  }, []);
+
+  const initToAbout = useCallback((index) => {
+    setActiveAbout(index);
   }, []);
 
   const toShow = useCallback(() => {
@@ -62,7 +67,37 @@ export const ModalButton: React.FC<Props> = (props) => {
       id: 4,
       text: t('bidAnother')
     }
-  ]
+  ];
+  const aboutData = [
+    {
+      id: 1,
+      text: t('bidAbouts.0')
+    },
+    {
+      id: 2,
+      text: t('bidAbouts.1')
+    },
+    {
+      id: 3,
+      text: t('bidAbouts.2')
+    },
+    {
+      id: 4,
+      text: t('bidAbouts.3')
+    },
+    {
+      id: 5,
+      text: t('bidAbouts.4')
+    },
+    {
+      id: 6,
+      text: t('bidAbouts.5')
+    },
+    {
+      id: 7,
+      text: t('bidAbouts.6')
+    },
+  ];
 
   return (
     <>
@@ -94,12 +129,12 @@ export const ModalButton: React.FC<Props> = (props) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full lg:max-w-[980px] transform overflow-hidden rounded-2xl bg-white p-[50px] text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full lg:max-w-[980px] transform overflow-hidden rounded-2xl bg-white px-4 py-8 lg:p-[50px] text-left align-middle shadow-xl transition-all">
                   <div className="flex flex-col gap-y-10">
                     <div>
                       <Dialog.Title
                         as="h3"
-                        className="font-['Raleway',sans-serif] text-center font-bold text-[32px] leading-[120%] text-[#070809] mb-[20px]"
+                        className="font-['Raleway',sans-serif] text-center font-bold text-xl lg:text-[32px] leading-[120%] text-[#070809] mb-[20px]"
                       >
                         {t('bidHelpTitle')}
                       </Dialog.Title>
@@ -111,9 +146,9 @@ export const ModalButton: React.FC<Props> = (props) => {
                               onClick={() => {
                                 initToHelper(chip.text);
                               }}
-                              className={`${activeChip === chip.text ? styles.active : ''} bg-[#F1F1F1] border border-[#f1f1f1] text-[#616161] py-4 w-full rounded-full text-center cursor-pointer hover:bg-transparent hover:border-[#070809] hover:text-[#070809]`}
+                              className={`${activeChip === chip.text ? styles.active : ''} bg-[#F1F1F1] border border-[#f1f1f1] text-[#616161] py-4 px-4 w-full rounded-full text-center cursor-pointer hover:bg-transparent hover:border-[#070809] hover:text-[#070809]`}
                             >
-                              <p className="font-['Questrial',sans-serif] text-xl leading-[100%]">
+                              <p className="font-['Questrial',sans-serif] text-xs lg:text-xl leading-[100%]">
                                 {chip.text}
                               </p>
                             </div>
@@ -124,7 +159,7 @@ export const ModalButton: React.FC<Props> = (props) => {
                     <div>
                       <Dialog.Title
                         as="h3"
-                        className="font-['Raleway',sans-serif] text-center font-bold text-[32px] leading-[120%] text-[#070809] mb-[20px]"
+                        className="font-['Raleway',sans-serif] text-center font-bold text-xl lg:text-[32px] leading-[120%] text-[#070809] mb-[20px]"
                       >
                         {t('bidPlatformsTitle')}
                       </Dialog.Title>
@@ -138,7 +173,7 @@ export const ModalButton: React.FC<Props> = (props) => {
                               }}
                               className={`${activePlatform === chip.text ? styles.active : ''} bg-[#F1F1F1] border border-[#f1f1f1] text-[#616161] py-4 w-full rounded-full text-center cursor-pointer hover:bg-transparent hover:border-[#070809] hover:text-[#070809]`}
                             >
-                              <p className="font-['Questrial',sans-serif] text-xl leading-[100%]">
+                              <p className="font-['Questrial',sans-serif] text-xs lg:text-xl leading-[100%]">
                                 {chip.text}
                               </p>
                             </div>
@@ -147,7 +182,31 @@ export const ModalButton: React.FC<Props> = (props) => {
                       </div>
                     </div>
                     <div>
-
+                      <Dialog.Title
+                        as="h3"
+                        className="font-['Raleway',sans-serif] text-center font-bold text-xl lg:text-[32px] leading-[120%] text-[#070809] mb-[20px]"
+                      >
+                        {t('bidAboutTitle')}
+                      </Dialog.Title>
+                      <div className="flex justify-center">
+                        <div className="flex flex-wrap justify-center max-w-[700px] items-center gap-[10px] w-full">
+                          {aboutData.map((chip) => {
+                            return (
+                              <div
+                                key={chip.id}
+                                onClick={() => {
+                                  initToAbout(chip.text);
+                                }}
+                                className={`${activeAbout === chip.text ? styles.active : ''} bg-[#F1F1F1] border border-[#f1f1f1] text-[#616161] py-4 px-4 md:px-6 rounded-full text-center cursor-pointer hover:bg-transparent hover:border-[#070809] hover:text-[#070809]`}
+                              >
+                                <p className="font-['Questrial',sans-serif] text-xs lg:text-xl leading-[100%]">
+                                  {chip.text}
+                                </p>
+                              </div>
+                            )
+                          })}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Dialog.Panel>
