@@ -43,7 +43,7 @@ const Homepage: NextPage = () => {
       <HorizontalScroll />
       <Advantages />
       <Technologies />
-      <div className="lg:py-24">
+      <div className="pb-24 lg:py-24">
         <Projects />
       </div>
       <AddHeadline />
