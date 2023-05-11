@@ -27,7 +27,7 @@ export const DrawerMenu = () => {
           `${show ?
             'opacity-100 translate-x-0 transition ease-in-out' : 'opacity-0 translate-x-full transition duration-300 ease-in-out'
           } 
-            fixed overflow-hidden z-10 bg-white bg-opacity-90 inset-0 transform ease-in-out`
+            fixed overflow-hidden z-10 bg-black md:bg-white bg-opacity-90 inset-0 transform ease-in-out`
         }>
         <section
           className={

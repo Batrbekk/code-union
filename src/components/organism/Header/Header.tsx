@@ -4,7 +4,7 @@ import Logo from "public/assets/logo.svg";
 import { COMMON_TNS } from "@/lib/i18n/consts";
 import { useTranslation } from "react-i18next";
 import Switch from "@/components/atomic/Switch";
-import Button from "@/components/atomic/Button";
+import ModalButton from "@/components/atomic/ModalButton";
 import React, { useEffect, useState } from "react";
 import DrawerMenu from "@/components/organism/DrawerMenu";
 
@@ -48,7 +48,10 @@ export const Header: React.FC<Props> = (props) => {
           </div>
           <div className="flex items-center gap-x-4">
             <Switch className="hidden md:flex" />
-            <Button text={t('contactUs')} className="text-white px-6 py-3 rounded-full bg-[#0046FA] font-bold text-xs md:text-base" onClick={btnLog} />
+            <ModalButton
+              text={t('contactUs')}
+              className="text-white px-6 py-3 rounded-full bg-[#0046FA] font-bold text-xs md:text-base"
+            />
             <DrawerMenu />
           </div>
         </div>
