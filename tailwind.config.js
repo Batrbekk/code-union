@@ -20,6 +20,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('tailwindcss-animated'),
     require("tailwindcss-typography")({
       // https://www.npmjs.com/package/tailwindcss-typography
       // all these options default to the values specified here
