@@ -27,7 +27,7 @@ export const ProjectCardDesc: React.FC<Props> = (props) => {
             <p className="font-['Raleway',sans-serif] font-bold leading-[120%] text-5xl text-white">
               {props.title}
             </p>
-            <p className="font-['Questrial',sans-serif] leading-[150%] text-[22px] text-white">
+            <p className="font-['Gilroy',sans-serif] leading-[150%] text-[22px] text-white">
               {props.text}
             </p>
           </div>
@@ -52,7 +52,7 @@ export const ProjectCardDesc: React.FC<Props> = (props) => {
               <p className="font-['Raleway',sans-serif] font-bold leading-[120%] text-5xl text-white">
                 {props.title}
               </p>
-              <p className="font-['Questrial',sans-serif] leading-[150%] text-[22px] text-white">
+              <p className="font-['Gilroy',sans-serif] leading-[150%] text-[22px] text-white">
                 {props.text}
               </p>
             </div>

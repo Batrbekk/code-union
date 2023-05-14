@@ -20,13 +20,9 @@ export const Header: React.FC<Props> = (props) => {
     });
   }, []);
 
-  const btnLog = React.useCallback(() => {
-    console.log('asd');
-  }, []);
-
   return (
-    <div className={`sticky top-0 w-full z-10 bg-[#070809] ${scroll ? 'shadow-lg shadow-[rgba(255,255,255,0.4)]': ''}`}>
-      <header className="py-4 px-5 lg:container mx-auto md:px-5 flex items-center justify-between">
+    <div className={`${scroll ? 'fixed' : 'sticky'} top-0 w-full z-10 bg-[#070809]`}>
+      <header className="py-4 px-5 lg:px-0 lg:container mx-auto lg:max-w-[1280px] md:px-5 flex items-center justify-between">
         <div className={`${styles.navLogo} flex flex-col items-start gap-x-4 md:flex-col md:items-start lg:flex-row lg:items-end`}>
           <Image src={Logo} alt="logo" />
           <p className="text-[8px] md:text-lg text-white">Code Union</p>

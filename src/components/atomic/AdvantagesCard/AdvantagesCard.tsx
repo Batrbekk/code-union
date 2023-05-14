@@ -25,19 +25,19 @@ export const AdvantagesCard: React.FC<Props> = (props) => {
         <div className="flex items-center gap-x-2">
           <div className="px-4 py-2 border  rounded-full flex items-center gap-x-1.5">
             <Image src={TimeIcon} alt="time-icon" />
-            <p className="text-white font-['Questrial',sans-serif] font-medium text-xs leading-[150%] md:text-2xl">
+            <p className="text-white font-['Gilroy',sans-serif] font-medium text-xs leading-[150%] md:text-2xl">
               {t('advantagesTime')}
             </p>
           </div>
           <div className="px-4 py-2 border  rounded-full flex items-center gap-x-1.5">
             <Image src={BudgetIcon} alt="time-icon" />
-            <p className="text-white font-['Questrial',sans-serif] font-medium text-xs leading-[150%] md:text-2xl">
+            <p className="text-white font-['Gilroy',sans-serif] font-medium text-xs leading-[150%] md:text-2xl">
               {t('advantagesBudget')}
             </p>
           </div>
         </div>
       )}
-      <p className="text-white font-['Questrial',sans-serif] text-sm leading-[150%] w-8/12 lg:w-full md:text-[22px]">
+      <p className="text-white font-['Gilroy',sans-serif] text-sm leading-[150%] w-8/12 lg:w-full md:text-[22px]">
         {props.text}
       </p>
     </div>

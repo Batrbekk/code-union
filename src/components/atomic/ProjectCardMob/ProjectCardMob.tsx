@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from './index.module.scss';
 import Image, {StaticImageData} from "next/image";
+import 'aos/dist/aos.css';
+import AOS from "aos";
 
 type Props = {
   title: string
@@ -8,12 +10,18 @@ type Props = {
   icon: StaticImageData,
   className: string,
   height: string,
-  imgPosition: string
+  imgPosition: string,
+  aos: string
 };
 
 export const ProjectCardMob: React.FC<Props> = (props) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div
+      data-aos={props.aos}
       className={`
         ${props.className} 
         p-5 rounded-[15px] ${props.height} relative overflow-hidden
@@ -23,7 +31,7 @@ export const ProjectCardMob: React.FC<Props> = (props) => {
         <p className="font-['Raleway',sans-serif] font-bold text-2xl leading-[120%] md:text-5xl text-white">
           {props.title}
         </p>
-        <p className="font-['Questrial',sans-serif] text-base leading-[150%] md:text-[22px] text-white">
+        <p className="font-['Gilroy',sans-serif] text-base leading-[150%] md:text-[22px] text-white">
           {props.text}
         </p>
       </div>

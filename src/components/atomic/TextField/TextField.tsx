@@ -26,7 +26,7 @@ export const TextField: React.FC<Props> = (props) => {
       type={props.type}
       onChange={handleChange}
       placeholder={props.placeholder}
-      className={`${props.isError ? 'bg-[#ffebeb]' : 'bg-transparent'} p-4 md:p-6 border border-[#c4c4c4] rounded-[25px] w-full focus-visible:outline-0 focus:border-[#070809] text-sm placeholder:text-sm font-['Questrial',sans-serif] leading-[100%] placeholder:leading-[100%] font-medium placeholder:font-medium lg:text-xl lg:placeholder:text-xl placeholder:text-[#c3c3c3] text-[#070809]`}
+      className={`${props.isError ? 'bg-[#ffebeb]' : 'bg-transparent'} p-4 md:p-6 border border-[#c4c4c4] rounded-[25px] w-full focus-visible:outline-0 focus:border-[#070809] text-sm placeholder:text-sm font-['Gilroy',sans-serif] leading-[100%] placeholder:leading-[100%] font-medium placeholder:font-medium lg:text-xl lg:placeholder:text-xl placeholder:text-[#c3c3c3] text-[#070809]`}
     />
   )
 }

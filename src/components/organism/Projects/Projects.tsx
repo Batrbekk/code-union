@@ -15,6 +15,9 @@ import kaltadaDesc from 'public/assets/img/kaltada-desc.svg';
 import lionMob from 'public/assets/img/lion-mob.svg';
 import lionDesc from 'public/assets/img/lion-desc.svg';
 import ProjectCardDesc from "@/components/atomic/ProjectCardDesc";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import {useEffect} from "react";
 
 export const Projects = () => {
   const { t } = useTranslation([COMMON_TNS]);
@@ -26,7 +29,8 @@ export const Projects = () => {
       icon: icMarketMob,
       className: 'bg-[#00BA77] md:max-w-[350px]',
       height: 'h-[450px] md:h-[516px]',
-      imgPosition: '-bottom-1.5 right-0'
+      imgPosition: '-bottom-1.5 right-0',
+      aos: 'fade-left'
     },
     {
       title: 'Foody',
@@ -34,7 +38,8 @@ export const Projects = () => {
       icon: foodyMob,
       className: 'bg-[#0046FA] md:max-w-[350px]',
       height: 'h-[350px] md:h-[516px]',
-      imgPosition: '-bottom-1.5 left-0'
+      imgPosition: '-bottom-1.5 left-0',
+      aos: 'fade-right'
     },
     {
       title: 'Flapp',
@@ -42,7 +47,8 @@ export const Projects = () => {
       icon: flappMob,
       className: 'bg-[#FF004C] md:max-w-[350px]',
       height: 'h-[350px] md:h-[516px]',
-      imgPosition: '-bottom-1.5 right-0'
+      imgPosition: '-bottom-1.5 right-0',
+      aos: 'fade-left'
     },
     {
       title: 'Learning English Mobile App',
@@ -50,7 +56,8 @@ export const Projects = () => {
       icon: engMob,
       className: 'bg-[#0089ED] md:max-w-[350px]',
       height: 'h-[350px] md:h-[516px]',
-      imgPosition: '-bottom-1.5'
+      imgPosition: '-bottom-1.5',
+      aos: 'fade-right'
     },
     {
       title: 'Kaltada',
@@ -58,7 +65,8 @@ export const Projects = () => {
       icon: kaltadaMob,
       className: 'bg-[#CE00DB] md:max-w-[350px]',
       height: 'h-[350px] md:h-[516px]',
-      imgPosition: '-bottom-1.5 right-0'
+      imgPosition: '-bottom-1.5 right-0',
+      aos: 'fade-left'
     },
     {
       title: 'Lion Pride',
@@ -66,13 +74,20 @@ export const Projects = () => {
       icon: lionMob,
       className: 'bg-[#9227FF] md:max-w-[350px]',
       height: 'h-[450px] md:h-[516px]',
-      imgPosition: '-bottom-1.5 right-0'
+      imgPosition: '-bottom-1.5 right-0',
+      aos: 'fade-right'
     }
   ];
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="flex flex-col gap-y-5 px-5 md:gap-y-12 lg:container mx-auto">
-      <p className="text-white font-['Raleway',sans-serif] font-bold text-[28px] leading-[130%] md:text-[54px] md:leading-[120%]">{t('ourProject')}</p>
+    <div className="flex flex-col gap-y-5 px-5 md:gap-y-12 lg:container lg:max-w-[1280px] lg:px-0 mx-auto">
+      <p data-aos="fade-up" className="text-white font-['Raleway',sans-serif] font-bold text-[28px] leading-[130%] md:text-[54px] md:leading-[120%]">
+        {t('ourProject')}
+      </p>
       <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-y-4 md:gap-4 lg:hidden">
         {cardMobData.map((card) => {
           return (
@@ -84,21 +99,24 @@ export const Projects = () => {
               className={card.className}
               height={card.height}
               imgPosition={card.imgPosition}
+              aos={card.aos}
             />
           )
         })}
       </div>
       <div className="flex flex-col hidden lg:flex gap-y-4">
         <div className="flex items-center justify-start gap-x-4 w-full">
-          <ProjectCardDesc
-            bigCard={true}
-            title="IC-Market"
-            text={t('icMarketDesc')}
-            icon={icMarketDesc}
-            className="bg-[#00BA77]"
-            imgPosition="-bottom-2"
-          />
-          <div className="flex flex-col gap-y-4">
+          <div data-aos="fade-right">
+            <ProjectCardDesc
+              bigCard={true}
+              title="IC-Market"
+              text={t('icMarketDesc')}
+              icon={icMarketDesc}
+              className="bg-[#00BA77]"
+              imgPosition="-bottom-2"
+            />
+          </div>
+          <div data-aos="fade-left" className="flex flex-col gap-y-4">
             <ProjectCardDesc
               bigCard={false}
               title="Foody"
@@ -118,15 +136,17 @@ export const Projects = () => {
           </div>
         </div>
         <div className="flex flex-row-reverse justify-end gap-x-4 w-full">
-          <ProjectCardDesc
-            bigCard={true}
-            title="Lion Pride"
-            text={t('lionPrideDesc')}
-            icon={lionDesc}
-            className="bg-[#9227FF]"
-            imgPosition="-bottom-2"
-          />
-          <div className="flex flex-col gap-y-4">
+          <div data-aos="fade-left">
+            <ProjectCardDesc
+              bigCard={true}
+              title="Lion Pride"
+              text={t('lionPrideDesc')}
+              icon={lionDesc}
+              className="bg-[#9227FF]"
+              imgPosition="-bottom-2"
+            />
+          </div>
+          <div data-aos="fade-right" className="flex flex-col gap-y-4">
             <ProjectCardDesc
               bigCard={false}
               title="Learning English Mobile App"

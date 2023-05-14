@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from './index.module.scss';
 import {useTranslation} from "react-i18next";
 import {COMMON_TNS} from "@/lib/i18n/consts";
@@ -9,7 +10,9 @@ import KotlinIcon from 'public/assets/icons/kotlin.svg';
 import GolangIcon from 'public/assets/icons/goLang.svg';
 import PythonIcon from 'public/assets/icons/python.svg';
 import FlutterIcon from 'public/assets/icons/flutter.svg';
-import Image from "next/image";
+import {useEffect} from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 export const Technologies = () => {
   const { t } = useTranslation([COMMON_TNS]);
@@ -55,10 +58,14 @@ export const Technologies = () => {
       icon: NodeIcon,
       text: 'Node.JS'
     },
-  ]
+  ];
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
-    <div className={`${styles.techContainer} px-5 py-24 lg:container mx-auto`}>
+    <div data-aos="fade-up" className={`${styles.techContainer} px-5 py-24 lg:container lg:max-w-[1280px] lg:px-0 mx-auto`}>
       <p className="font-['Raleway',sans-serif] font-bold text-white text-[28px] leading-[120%] mb-8 md:mb-16 md:text-[54px]">
         {t('technologies')}
       </p>
@@ -67,7 +74,7 @@ export const Technologies = () => {
           return (
             <div key={card.id} className="flex flex-col w-full items-center gap-y-2.5 lg:max-w-[145px] lg:gap-y-7">
               <Image src={card.icon} alt="tech-icon" />
-              <p className="text-white font-['Questrial',sans-serif] text-xs leading-[150%] md:text-xl">{card.text}</p>
+              <p className="text-white font-['Gilroy',sans-serif] text-xs leading-[150%] md:text-xl">{card.text}</p>
             </div>
           )
         })}

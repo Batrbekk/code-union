@@ -1,4 +1,5 @@
 import Head from "next/head";
+import React, {useEffect, useState} from "react";
 import { useTranslation } from "react-i18next";
 import { GetStaticProps, NextPage } from "next";
 import Header from "@/components/organism/Header";
@@ -28,11 +29,10 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 };
 
 const Homepage: NextPage = () => {
-  const { t } = useTranslation([PAGES_TNS], { keyPrefix: "index" });
   const { t: gt } = useTranslation([GLOSSARY_TNS]);
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Head>
         <title>Code Union</title>
         <link rel="icon" href="/favicon.ico" />
@@ -47,7 +47,7 @@ const Homepage: NextPage = () => {
       </div>
       <AddHeadline />
       <Footer />
-    </>
+    </div>
   );
 };
 
