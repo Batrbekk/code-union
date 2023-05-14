@@ -2,18 +2,18 @@ import styles from './index.module.scss';
 import {useTranslation} from "react-i18next";
 import {COMMON_TNS} from "@/lib/i18n/consts";
 import ProjectCardMob from "@/components/atomic/ProjectCardMob";
-import icMarketMob from 'public/assets/img/icMarket-mob.svg';
-import icMarketDesc from 'public/assets/img/icMarket-desc.svg';
-import foodyMob from 'public/assets/img/foody-mob.svg';
-import foodyDesc from 'public/assets/img/foody-desc.svg';
-import flappMob from 'public/assets/img/flapp-mob.svg';
-import flappDesc from 'public/assets/img/flapp-desc.svg';
-import engMob from 'public/assets/img/eng-mob.svg';
-import engDesc from 'public/assets/img/eng-desc.svg';
-import kaltadaMob from 'public/assets/img/kaltada-mob.svg';
-import kaltadaDesc from 'public/assets/img/kaltada-desc.svg';
-import lionMob from 'public/assets/img/lion-mob.svg';
-import lionDesc from 'public/assets/img/lion-desc.svg';
+import icMarketMob from 'public/assets/img/icMarket-mob.webp';
+import icMarketDesc from 'public/assets/img/icMarket-desc.webp';
+import foodyMob from 'public/assets/img/foody-mob.webp';
+import foodyDesc from 'public/assets/img/foody-desc.webp';
+import flappMob from 'public/assets/img/flapp-mob.webp';
+import flappDesc from 'public/assets/img/flapp-desc.webp';
+import engMob from 'public/assets/img/eng-mob.webp';
+import engDesc from 'public/assets/img/eng-desc.webp';
+import kaltadaMob from 'public/assets/img/kaltada-mob.webp';
+import kaltadaDesc from 'public/assets/img/kaltada-desc.webp';
+import lionMob from 'public/assets/img/lion-mob.webp';
+import lionDesc from 'public/assets/img/lion-desc.webp';
 import ProjectCardDesc from "@/components/atomic/ProjectCardDesc";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -143,7 +143,7 @@ export const Projects = () => {
               text={t('lionPrideDesc')}
               icon={lionDesc}
               className="bg-[#9227FF]"
-              imgPosition="-bottom-2"
+              imgPosition="-bottom-2 right-0"
             />
           </div>
           <div data-aos="fade-right" className="flex flex-col gap-y-4">
