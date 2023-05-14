@@ -104,7 +104,7 @@ export const Projects = () => {
           )
         })}
       </div>
-      <div className="flex flex-col hidden lg:flex gap-y-4">
+      <div className="flex-col hidden lg:flex gap-y-4">
         <div className="flex items-center justify-start gap-x-4 w-full">
           <div data-aos="fade-right">
             <ProjectCardDesc

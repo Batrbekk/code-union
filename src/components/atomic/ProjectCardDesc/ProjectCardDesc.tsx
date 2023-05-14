@@ -20,7 +20,7 @@ export const ProjectCardDesc: React.FC<Props> = (props) => {
           className={`
             ${props.className} 
             p-10 rounded-[25px] relative overflow-hidden
-            h-[716px] max-w-[474px]
+            h-[716px] max-w-[555px]
           `}
         >
           <div className="flex flex-col gap-y-2.5">
@@ -43,9 +43,10 @@ export const ProjectCardDesc: React.FC<Props> = (props) => {
       ) : (
         <div
           className={`
+          ${styles.litleCard}
           ${props.className} 
           rounded-[25px] relative overflow-hidden
-          h-[350px] max-w-[670px]
+          h-[350px] max-w-[755px]
         `}>
           <div className={`absolute max-w-[336px] py-10 ${props.textPosition}`}>
             <div className="flex flex-col justify-between h-[270px]">
