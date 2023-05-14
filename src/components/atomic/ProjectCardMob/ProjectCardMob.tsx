@@ -37,6 +37,7 @@ export const ProjectCardMob: React.FC<Props> = (props) => {
       </div>
       <div className={`absolute ${props.imgPosition}`}>
         <Image
+          priority
           src={props.icon}
           alt="project-icon"
         />

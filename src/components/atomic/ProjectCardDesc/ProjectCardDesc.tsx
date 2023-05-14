@@ -34,6 +34,7 @@ export const ProjectCardDesc: React.FC<Props> = (props) => {
           <div className={`${props.imgPosition} absolute`}>
             {props.icon && (
               <Image
+                priority
                 src={props.icon}
                 alt="project-icon"
               />
@@ -58,7 +59,7 @@ export const ProjectCardDesc: React.FC<Props> = (props) => {
               </p>
             </div>
           </div>
-          <Image src={props.icon} alt="project-img" />
+          <Image priority src={props.icon} alt="project-img" />
         </div>
       )}
     </>
