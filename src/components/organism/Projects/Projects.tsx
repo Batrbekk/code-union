@@ -29,7 +29,7 @@ export const Projects = () => {
       icon: icMarketMob,
       className: 'bg-[#00BA77] md:max-w-[350px]',
       height: 'h-[450px] md:h-[516px]',
-      imgPosition: '-bottom-1.5 right-0',
+      imgPosition: '-bottom-1.5 right-0 max-w-[75%]',
       aos: 'fade-left'
     },
     {
@@ -38,7 +38,7 @@ export const Projects = () => {
       icon: foodyMob,
       className: 'bg-[#0046FA] md:max-w-[350px]',
       height: 'h-[350px] md:h-[516px]',
-      imgPosition: '-bottom-1.5 left-0',
+      imgPosition: '-bottom-1.5 left-0 max-w-[75%]',
       aos: 'fade-right'
     },
     {
@@ -56,7 +56,7 @@ export const Projects = () => {
       icon: engMob,
       className: 'bg-[#0089ED] md:max-w-[350px]',
       height: 'h-[350px] md:h-[516px]',
-      imgPosition: '-bottom-1.5',
+      imgPosition: '-bottom-1.5 max-w-[75%]',
       aos: 'fade-right'
     },
     {
@@ -65,7 +65,7 @@ export const Projects = () => {
       icon: kaltadaMob,
       className: 'bg-[#CE00DB] md:max-w-[350px]',
       height: 'h-[350px] md:h-[516px]',
-      imgPosition: '-bottom-1.5 right-0',
+      imgPosition: '-bottom-1.5 right-0 max-w-[70%]',
       aos: 'fade-left'
     },
     {
@@ -74,7 +74,7 @@ export const Projects = () => {
       icon: lionMob,
       className: 'bg-[#9227FF] md:max-w-[350px]',
       height: 'h-[450px] md:h-[516px]',
-      imgPosition: '-bottom-1.5 right-0',
+      imgPosition: '-bottom-1.5 right-0 max-w-[75%]',
       aos: 'fade-right'
     }
   ];
