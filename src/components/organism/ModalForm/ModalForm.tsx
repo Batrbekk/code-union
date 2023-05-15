@@ -8,6 +8,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import React, {useCallback, useState, Fragment, useEffect} from "react";
 import TextArea from "@/components/atomic/TextArea";
 import InputFile from "@/components/atomic/InputFile";
+import validator from 'validator';
 
 type Props = {
   text: string,
@@ -86,19 +87,14 @@ export const ModalForm: React.FC<Props> = (props) => {
   }, []);
 
   const sendForm = useCallback(() => {
-    if (!name) {
-      setNameErr(true);
-    }
-    if (!mail) {
+    if (validator.isEmail(mail)) {
+      console.log(validator.isEmail(mail));
+      setMailErr(false);
+    } else {
+      console.log('false')
       setMailErr(true);
     }
-    if (!company) {
-      setCompanyErr(true);
-    }
-    if (!task) {
-      setTaskErr(true);
-    }
-    if (name && mail && company && task) {
+    if (name && company && task) {
       console.log('name:', name);
       console.log('mail:', mail);
       console.log('company:', company);
