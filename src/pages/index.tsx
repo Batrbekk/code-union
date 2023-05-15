@@ -32,7 +32,7 @@ const Homepage: NextPage = () => {
   const { t: gt } = useTranslation([GLOSSARY_TNS]);
 
   return (
-    <div className="overflow-x-hidden">
+    <>
       <Head>
         <title>Code Union</title>
         <link rel="icon" href="/favicon.ico" />
@@ -47,7 +47,7 @@ const Homepage: NextPage = () => {
       </div>
       <AddHeadline />
       <Footer />
-    </div>
+    </>
   );
 };
 

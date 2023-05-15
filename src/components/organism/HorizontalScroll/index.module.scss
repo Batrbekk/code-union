@@ -1,25 +1,8 @@
-.container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  opacity: 1;
-  transform: translateX(80%);
-  transition: transform 0.5s ease;
+.scrollHidden::-webkit-scrollbar {
+  display: none;
 }
 
-.visible {
-  opacity: 1;
-  transform: translateX(14%);
-}
-
-@media screen and (max-width: 1024px) {
-  .container {
-    transform: translateX(80%);
-  }
-
-  .visible {
-    opacity: 1;
-    transform: translateX(3%);
-  }
+.scrollHidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
