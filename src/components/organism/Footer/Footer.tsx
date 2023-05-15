@@ -55,15 +55,21 @@ export const Footer = () => {
                 {t('footerTitles.2')}
               </p>
               <div className="flex gap-x-4">
-                <Link href="#" className="cursor-pointer">
-                  <Image src={WhatsappIcon} alt="social-icon" />
-                </Link>
-                <Link href="#" className="cursor-pointer">
-                  <Image src={LinkedinIcon} alt="social-icon" />
-                </Link>
-                <Link href="#" className="cursor-pointer">
-                  <Image src={InstagramIcon} alt="social-icon" />
-                </Link>
+                <div className="cursor-pointer">
+                  <Link href="#">
+                    <Image src={WhatsappIcon} alt="social-icon" />
+                  </Link>
+                </div>
+                <div className="cursor-pointer">
+                  <Link href="#">
+                    <Image src={LinkedinIcon} alt="social-icon" />
+                  </Link>
+                </div>
+                <div className="cursor-pointer">
+                  <Link href="#">
+                    <Image src={InstagramIcon} alt="social-icon" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

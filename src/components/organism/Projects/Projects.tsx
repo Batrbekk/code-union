@@ -143,7 +143,7 @@ export const Projects = () => {
               text={t('lionPrideDesc')}
               icon={lionDesc}
               className="bg-[#9227FF]"
-              imgPosition="-bottom-2 right-0"
+              imgPosition="-bottom-2 right-0 max-w-[85%]"
             />
           </div>
           <div data-aos="fade-right" className="flex flex-col gap-y-4">
