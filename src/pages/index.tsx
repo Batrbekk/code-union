@@ -38,7 +38,9 @@ const Homepage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Headline />
+      <div className="mt-[74px] md:mt-[90px]">
+        <Headline />
+      </div>
       <HorizontalScroll />
       <Advantages />
       <Technologies />

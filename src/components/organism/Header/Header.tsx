@@ -12,16 +12,9 @@ type Props = {};
 
 export const Header: React.FC<Props> = (props) => {
   const { t } = useTranslation([COMMON_TNS]);
-  const [scroll, setScroll] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 50);
-    });
-  }, []);
 
   return (
-    <div className={`${scroll ? 'fixed' : 'sticky'} top-0 w-full z-10 bg-[#070809]`}>
+    <div className={`fixed top-0 w-full z-10 bg-[#070809]`}>
       <header className="py-4 px-5 lg:px-0 lg:container mx-auto lg:max-w-[1280px] md:px-5 flex items-center justify-between">
         <div className={`${styles.navLogo} flex flex-col items-start gap-x-4 md:flex-col md:items-start lg:flex-row lg:items-end`}>
           <Image src={Logo} alt="logo" />

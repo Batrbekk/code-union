@@ -24,6 +24,7 @@ export const ModalForm: React.FC<Props> = (props) => {
   const [company, setCompany] = useState<string>('');
   const [nameErr, setNameErr] = useState<boolean>(false);
   const [mailErr, setMailErr] = useState<boolean>(false);
+  const [phoneErr, setPhoneErr] = useState<boolean>(false);
   const [companyErr, setCompanyErr] = useState<boolean>(false);
   const [taskErr, setTaskErr] = useState<boolean>(false);
   const [file, setFile] = useState<File | null>(null);
@@ -88,21 +89,40 @@ export const ModalForm: React.FC<Props> = (props) => {
 
   const sendForm = useCallback(() => {
     if (validator.isEmail(mail)) {
-      console.log(validator.isEmail(mail));
       setMailErr(false);
+      console.log('mail:', mail);
     } else {
-      console.log('false')
       setMailErr(true);
     }
-    if (name && company && task) {
-      console.log('name:', name);
-      console.log('mail:', mail);
-      console.log('company:', company);
-      console.log('task:', task);
+
+    if (validator.isMobilePhone(mail)) {
+      setPhoneErr(false);
       console.log('phone:', phone);
-      console.log('file:', file);
+    } else {
+      setPhoneErr(true);
     }
-  }, [name, mail, company, task, file, phone]);
+
+    if (name) {
+      setNameErr(false);
+      console.log('name:', name);
+    } else {
+      setNameErr(true);
+    }
+
+    if (company) {
+      setCompanyErr(false);
+      console.log('company:', company);
+    } else  {
+      setCompanyErr(true);
+    }
+
+    if (task) {
+      setTaskErr(false);
+      console.log('task:', task);
+    } else {
+      setTaskErr(true);
+    }
+  }, [name, mail, company, task, phone]);
 
   const helperData = [
     {
@@ -290,7 +310,7 @@ export const ModalForm: React.FC<Props> = (props) => {
                           id="phone"
                           name="phone"
                           type="tel"
-                          isError={false}
+                          isError={phoneErr}
                           placeholder={t('bidForms.3')}
                           inputChange={handlePhoneChange}
                         />
