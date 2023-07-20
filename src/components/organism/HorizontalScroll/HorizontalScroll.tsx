@@ -10,23 +10,23 @@ type Props = {};
 
 export const HorizontalScroll: React.FC<Props> = (props) => {
   const { t } = useTranslation([COMMON_TNS]);
-  const [firstParallaxSize, setFirstParallaxSize] = useState<CSSEffect | undefined>(['-30%','50%']);
-  const [secondParallaxSize, setSecondParallaxSize] = useState<CSSEffect | undefined>(['22%','-50%']);
+  const [firstParallaxSize, setFirstParallaxSize] = useState<CSSEffect | undefined>(['-3%','20%']);
+  const [secondParallaxSize, setSecondParallaxSize] = useState<CSSEffect | undefined>(['3%','-20%']);
 
   useEffect(() => {
     if (window.innerWidth > 1200) {
-      setFirstParallaxSize(['-30%','50%']);
-      setSecondParallaxSize(['22%','-50%']);
+      setFirstParallaxSize(['-3%','20%']);
+      setSecondParallaxSize(['3%','-20%']);
     }
 
     if (window.innerWidth < 1200) {
-      setFirstParallaxSize(['-45%', '50%']);
-      setSecondParallaxSize(['45%', '-50%']);
+      setFirstParallaxSize(['-3%', '20%']);
+      setSecondParallaxSize(['8%', '-20%']);
     }
 
     if (window.innerWidth < 700) {
-      setFirstParallaxSize(['-42%', '50%']);
-      setSecondParallaxSize(['45%', '-50%']);
+      setFirstParallaxSize(['0%', '20%']);
+      setSecondParallaxSize(['10%', '-20%']);
     }
   }, []);
 
@@ -39,6 +39,8 @@ export const HorizontalScroll: React.FC<Props> = (props) => {
         className="mb-4 lg:max-w-[1280px] lg:mx-auto"
         translateY={['0%','0%']}
         translateX={firstParallaxSize}
+        speed={20}
+        easing="easeInQuad"
       >
         <div className="w-[200%] md:w-[150%] lg:w-full">
           <div className="flex items-center gap-2 md:gap-4">
@@ -59,6 +61,8 @@ export const HorizontalScroll: React.FC<Props> = (props) => {
         className="lg:max-w-[1280px] lg:mx-auto"
         translateY={['0%','0%']}
         translateX={secondParallaxSize}
+        speed={20}
+        easing="easeInQuad"
       >
         <div className="w-[300%] md:w-[150%] lg:w-full">
           <div className="flex items-center gap-2 md:gap-4">
