@@ -15,9 +15,6 @@ export const HorizontalScroll: React.FC<Props> = (props) => {
   const [secondParallaxSize, setSecondParallaxSize] = useState<CSSEffect | undefined>(['3%','-25%']);
 
   useEffect(() => {
-    if (window.innerWidth > 1200) {
-      setSecondParallaxSize(['3%','-25%']);
-    }
 
     if (window.innerWidth < 1200) {
       setSecondParallaxSize(['9.5%', '-25%']);
@@ -45,7 +42,7 @@ export const HorizontalScroll: React.FC<Props> = (props) => {
                 return (
                   <button
                     key={btn}
-                    className="px-4 py-2 border rounded-full text-white font-['Gilroy',sans-serif] text-sm leading-[150%] md:text-xl hover:bg-[#0046FA] hover:border-[#0046FA]"
+                    className="px-4 py-2 border rounded-full text-white font-['Gilroy',sans-serif] text-sm leading-[150%] md:text-xl lg:hover:bg-[#0046FA] lg:hover:border-[#0046FA]"
                   >
                     {t(`serviceList.${btn}`)}
                   </button>
@@ -65,7 +62,7 @@ export const HorizontalScroll: React.FC<Props> = (props) => {
                 return (
                   <button
                     key={btn}
-                    className="px-4 py-2 border rounded-full text-white font-['Gilroy',sans-serif] text-sm leading-[150%] md:text-xl hover:bg-[#0046FA] hover:border-[#0046FA]"
+                    className="px-4 py-2 border rounded-full text-white font-['Gilroy',sans-serif] text-sm leading-[150%] md:text-xl lg:hover:bg-[#0046FA] lg:hover:border-[#0046FA]"
                   >
                     {t(`serviceList.${btn}`)}
                   </button>
